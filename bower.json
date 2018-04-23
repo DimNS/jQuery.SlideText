@@ -1,0 +1,13 @@
+{
+  "name": "jquery-slidetext",
+  "description": "Плагин прокрутки текста при наведении курсора мыши",
+  "homepage": "https://github.com/DimNS/jQuery.SlideText",
+  "authors": [
+    "DimNS <atomcms@ya.ru>"
+  ],
+  "keywords": [
+    "slidetext",
+    "jquery.slidetext"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SlideText - jQuery-plugin slide text over mouse</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+
+    <style type="text/css">
+        .container-example {
+            border: 1px #000 solid;
+            margin-bottom: 50px;
+        }
+
+        .slidetext {
+            width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .slidetext__content {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-example slidetext">
+        <span class="slidetext__content">
+            Не слишком длинный текст, буквально немного прокрутки.
+        </span>
+    </div>
+
+    <div class="container-example slidetext">
+        <span class="slidetext__content">
+            А теперь, длинный текст. Чтобы увидеть как будет прокручиваться текст в котором много информации. Скорость прокрутки одинаковая для всех элементов.
+        </span>
+    </div>
+
+    <div class="container-example slidetext">
+        <span class="slidetext__content">
+            И ещё один текст, который ещё длиннее предыдущего. За счёт одинаковой скорости движения текста достигается одинаковая читабельность текстов во всех вариантах, и в коротком и в длинном. Добавим ещё текста, чтобы элемент стал длинным, очень длинным. Но слишком длинный текст лучше конечно не делать, чтобы вся информация поместилась в голове.
+        </span>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="dist/jquery.slidetext.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.slidetext').SlideText({
+                'element': '.slidetext__content',
+                'speed'  : 177
+            });
+        });
+    </script>
+</body>
+</html>
