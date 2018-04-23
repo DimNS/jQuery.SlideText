@@ -6,13 +6,19 @@
 1. jQuery v2+
 
 ## Установка
-```html
+```bash
+bower install --save jquery-slidetext
+```
+
+## Подключение
+```javascript
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="dist/jquery.slidetext.min.js"></script>
 ```
 
 ## Использование
+CSS
 ```css
 .slidetext {
     width: 300px;
@@ -26,6 +32,7 @@
 }
 ```
 
+HTML
 ```html
 <div class="container-example slidetext">
     <span class="slidetext__content">
@@ -34,6 +41,7 @@
 </div>
 ```
 
+JavaScript
 ```javascript
 $('.slidetext').SlideText({
     'element': '.slidetext__content',
