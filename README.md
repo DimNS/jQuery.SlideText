@@ -43,8 +43,9 @@ HTML
 
 JavaScript
 ```javascript
-$('.slidetext').SlideText({
-    'element': '.slidetext__content',
-    'speed'  : 177
+SlideText({
+    'elbox'    : '.slidetext',
+    'elcontent': '.slidetext__content',
+    'speed'    : 177
 });
 ```
