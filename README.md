@@ -9,6 +9,10 @@
 ```bash
 bower install --save jquery-slidetext
 ```
+или
+```bash
+npm i jquery-slidetext
+```
 
 ## Подключение
 ```javascript
