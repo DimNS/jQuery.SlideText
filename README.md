@@ -7,10 +7,6 @@
 
 ## Установка
 ```bash
-bower install --save jquery-slidetext
-```
-или
-```bash
 npm i jquery-slidetext
 ```
 
