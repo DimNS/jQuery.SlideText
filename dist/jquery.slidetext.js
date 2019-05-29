@@ -6,8 +6,8 @@
      *
      * @param {object} options Настройки
      *
-     * @version 24.04.2018
-     * @author DimNS <atomcms@ya.ru>
+     * @version 29.05.2019
+     * @author  DimNS <atomcms@ya.ru>
      */
     function SlideText(options) {
         var inlineSize = function (el) {
@@ -24,16 +24,16 @@
         };
 
         // Настройки по-умолчанию, расширяя их с помощью параметров, которые были переданы
-        var settings = $.extend({
+        var settings = jQuery.extend({
             'elbox'    : '.slidetext',
             'elcontent': '.slidetext__content',
             'speed'    : 177 // px\sec
         }, options);
 
-        $(document).on('mouseover', settings.elbox, function () {
-            var elemContent = $(this).find(settings.elcontent);
-            var sizes       = inlineSize($(this));
-            var distance    = sizes.width - $(this).width();
+        jQuery(document).on('mouseover', settings.elbox, function () {
+            var elemContent = jQuery(this).find(settings.elcontent);
+            var sizes       = inlineSize(jQuery(this));
+            var distance    = sizes.width - jQuery(this).width();
             var time        = distance / settings.speed; // time (sec) = distance / speed
 
             elemContent.css({
@@ -43,7 +43,7 @@
                 'transition-timing-function': 'linear'
             });
         }).on('mouseout', settings.elbox, function () {
-            $(this).find(settings.elcontent).css({
+            jQuery(this).find(settings.elcontent).css({
                 'margin-left'               : '0',
                 'transition-property'       : 'margin-left',
                 'transition-duration'       : '0.5s',
