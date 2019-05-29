@@ -1,21 +1,21 @@
-var gulp   = require('gulp');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
+var gulp   = require('gulp');        // Сам Gulp JS
+var rename = require('gulp-rename'); // Переименование файлов
+var uglify = require('gulp-uglify'); // Минификация JS
 
-gulp.task('default', ['js'], function () {
-    gulp.watch('src/*.js', ['js']);
-});
+// JS
 
-gulp.task('build', ['js'], function () {
-
-});
-
-gulp.task('js', function () {
-    gulp.src('src/jquery.slidetext.js')
+function js() {
+    return gulp.src('src/jquery.slidetext.js')
         .pipe(gulp.dest('dist'));
+}
 
-    gulp.src('src/jquery.slidetext.js')
+function jsMin() {
+    return gulp.src('src/jquery.slidetext.js')
         .pipe(uglify())
         .pipe(rename('jquery.slidetext.min.js'))
         .pipe(gulp.dest('dist'));
-});
+}
+
+// TASKS
+
+gulp.task('build', gulp.parallel(js, jsMin));
