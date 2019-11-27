@@ -3,7 +3,7 @@
 Плагин прокрутки текста при наведении курсора мыши
 
 ## Требования
-1. jQuery v2+
+1. jQuery v3+
 
 ## Установка
 ```bash
@@ -12,7 +12,7 @@ npm i jquery-slidetext
 
 ## Подключение
 ```javascript
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 <script type="text/javascript" src="dist/jquery.slidetext.min.js"></script>
 ```
